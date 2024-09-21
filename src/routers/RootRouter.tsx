@@ -16,3 +16,5 @@ const rootRouter = createBrowserRouter([
         ]
     }
 ])
+
+export default rootRouter;
