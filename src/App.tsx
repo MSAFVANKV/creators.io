@@ -8,10 +8,17 @@ function App() {
 
   return (
     <>
-    <div className={cn(``, {
+    <div className={cn(`h-screen`, {
               "debug-screens": import.meta.env.MODE === "development",
-            })}>
-      <Navbar/>
+            })}
+            style={{
+              backgroundImage:`url(public/Home/homepage.jpg)`,
+              backgroundPosition:"center",
+              backgroundSize:"cover",
+              backgroundRepeat:"no-repeat"
+            }}
+            >
+      {/* <Navbar/> */}
         <Outlet/>
         <Footer/>
     </div>

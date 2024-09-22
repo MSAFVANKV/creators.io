@@ -1,5 +1,6 @@
 import App from "@/App";
 import Home from "@/pages/userSide/Home";
+import Folder from "@/pages/userSide/ToDo";
 import { createBrowserRouter } from "react-router-dom";
 
 
@@ -13,6 +14,10 @@ const rootRouter = createBrowserRouter([
                 path:"/",
                 element: <Home/>
             },
+            // {
+            //     path:"/todo",
+            //     element: <Folder title="dasda" content="asdasdada"/>
+            // },
         ]
     }
 ])
