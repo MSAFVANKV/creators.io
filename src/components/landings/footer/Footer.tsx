@@ -1,5 +1,4 @@
-import { LayoutGrid } from "lucide-react";
-import React from "react";
+
 import { Icon } from '@iconify/react';
 import axios from "axios";
 import { Navigate } from "react-router-dom";

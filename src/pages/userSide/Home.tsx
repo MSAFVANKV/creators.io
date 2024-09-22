@@ -1,22 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import  { useState } from "react";
 import TodoWindow from "./todos/ToDo";
-import {
-  ContextMenu,
-  ContextMenuCheckboxItem,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuLabel,
-  ContextMenuRadioGroup,
-  ContextMenuRadioItem,
-  ContextMenuSeparator,
-  ContextMenuShortcut,
-  ContextMenuSub,
-  ContextMenuSubContent,
-  ContextMenuSubTrigger,
-  ContextMenuTrigger,
-} from "@/components/ui/context-menu";
+
 import CalculatorWindow from "./CalculatorWindow";
 
 type Props = {};
