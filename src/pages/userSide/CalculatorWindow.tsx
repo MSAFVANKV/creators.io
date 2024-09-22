@@ -38,10 +38,10 @@ const CalculatorWindow: React.FC<TodoWindowProps> = ({ isVisible, onClose }) => 
     <Rnd
       size={size}
       position={position}
-      onDragStop={(e, d) => {
+      onDragStop={(_, d) => {
         setPosition({ x: d.x, y: d.y });
       }}
-      onResizeStop={(e, direction, ref, delta, position) => {
+      onResizeStop={(_, __, ref, ___, position)=> {
         setSize({
           width: parseInt(ref.style.width, 10), // Convert to number
           height: parseInt(ref.style.height, 10), // Convert to number
