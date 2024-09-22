@@ -156,49 +156,49 @@ export default function Home({}: Props) {
         </ContextMenuContent>
       </ContextMenuTrigger>
     </ContextMenu> */}
-     <div className="p-5 h-screen w-screen bg-gray-900 flex flex-col justify-between overflow-hidden">
-          {/* Desktop Icon Layout */}
-          <div className="grid grid-cols-[repeat(auto-fill,_minmax(100px,_1fr))] gap-4  overflow-hidden">
-            {currentItems.map((system, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center justify-center p-3 bg-gray-800 rounded-md border border-transparent hover:border-gray-500 hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-                onClick={() => handleOpenApp(system.name)}
-              >
-                <div className="mb-2">{system.icon}</div>
-                <span className="text-white text-xs">{system.name}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Pagination Dots */}
-          <div className="flex justify-center items-center mb-10">
-            {Array.from({ length: totalPages }, (_, index) => (
-              <div
-                key={index}
-                onClick={() => handlePageChange(index + 1)}
-                className={`w-3 h-3 rounded-full mx-1 cursor-pointer ${
-                  currentPage === index + 1
-                    ? "bg-blue-500"
-                    : "bg-gray-500 hover:bg-blue-400"
-                } transition duration-300`}
-              ></div>
-            ))}
-          </div>
-
-          {/* Render the Todo app window if open */}
-          {isTodoOpen && (
-            <TodoWindow isVisible={true} onClose={() => handleCloseApp("Todo")} />
-          )}
-
-          {/* Render the Calculator app window if open */}
-          {isCalculatorOpen && (
-            <CalculatorWindow
-              isVisible={true}
-              onClose={() => handleCloseApp("Calculator")}
-            />
-          )}
+     <div className="p-5 h-screen w-screen flex flex-col justify-between overflow-hidden">
+        {/* Desktop Icon Layout */}
+        <div className="grid grid-cols-[repeat(auto-fill,_minmax(100px,_1fr))] gap-4 overflow-hidden">
+          {currentItems.map((system, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center p-3  rounded-md border border-transparent hover:border-gray-500 hover:bg-gray-100/30 backdrop-blur-lg transition-all duration-300 cursor-pointer"
+              onClick={() => handleOpenApp(system.name)}
+            >
+              <div className="mb-2">{system.icon}</div>
+              <span className="text-white text-xs">{system.name}</span>
+            </div>
+          ))}
         </div>
+
+        {/* Pagination Dots */}
+        <div className="flex justify-center items-center mb-10">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <div
+              key={index}
+              onClick={() => handlePageChange(index + 1)}
+              className={`w-3 h-3 rounded-full mx-1 cursor-pointer ${
+                currentPage === index + 1
+                  ? "bg-blue-500"
+                  : "bg-gray-500 hover:bg-blue-400"
+              } transition duration-300`}
+            ></div>
+          ))}
+        </div>
+
+        {/* Render the Todo app window if open */}
+        {isTodoOpen && (
+          <TodoWindow isVisible={true} onClose={() => handleCloseApp("Todo")} />
+        )}
+
+        {/* Render the Calculator app window if open */}
+        {isCalculatorOpen && (
+          <CalculatorWindow
+            isVisible={true}
+            onClose={() => handleCloseApp("Calculator")}
+          />
+        )}
+      </div>
     </>
 
   );
