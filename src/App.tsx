@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { cn } from "./lib/utils";
-import Navbar from "./components/landings/navbar/Navbar";
+// import Navbar from "./components/landings/navbar/Navbar";
 import Footer from "./components/landings/footer/Footer";
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./middlewares/ProtectedRoute";
