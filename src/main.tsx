@@ -7,7 +7,7 @@ import axios from 'axios'
 import { AuthProvider } from './context/AuthContext.tsx'
 
 // axios.defaults.baseURL = 'http://localhost:5000';
-axios.defaults.baseURL = 'https://creator-io-server.vercel.app/';
+axios.defaults.baseURL = 'https://creator-io-server.vercel.app';
 
 
 createRoot(document.getElementById('root')!).render(
