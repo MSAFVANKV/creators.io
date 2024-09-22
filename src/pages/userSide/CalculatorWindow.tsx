@@ -48,7 +48,7 @@ const CalculatorWindow: React.FC<TodoWindowProps> = ({ isVisible, onClose }) => 
         });
         setPosition(position);
       }}
-      minWidth={300}
+      minWidth={400}
       minHeight={200}
       className="bg-white shadow-lg rounded-md overflow-hidden"
     >

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <div className={cn(`h-screen`, {
+    <div className={cn(`h-screen w-screen overflow-hidden`, {
               "debug-screens": import.meta.env.MODE === "development",
             })}
             style={{
